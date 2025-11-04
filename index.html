@@ -9,10 +9,278 @@
         <title>Fish Hotels</title>
     </head>
     <body>
-        <div id="navbar">
-            <p>Placeholder</p>
+        <header class="site-header" role="banner">
+  <div class="container" >
+    <a class="brand" href="#" aria-label="Homepage">
+      <span class="logo" aria-hidden="true">B</span>
+      <div>
+        <h1>BlueCo</h1>
+        <p>Stores</p>
+      </div>
+    </a>
+
+    <nav class="primary" role="navigation" aria-label="Primary">
+      <ul class="nav-list" id="navList">
+        <li class="nav-item">
+          <button class="nav-button" aria-haspopup="true" aria-expanded="false" data-dropdown="about">About ▾</button>
+          <div class="dropdown-panel" data-panel="about" role="menu" aria-hidden="true">
+            <a href="#" role="menuitem">Our Story</a>
+            <a href="#" role="menuitem">Team</a>
+            <a href="#" role="menuitem">Careers</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <button class="nav-button" aria-haspopup="true" aria-expanded="false" data-dropdown="products">Products ▾</button>
+          <div class="dropdown-panel" data-panel="products" role="menu" aria-hidden="true">
+            <a href="#" role="menuitem">New Arrivals</a>
+            <a href="#" role="menuitem">Popular</a>
+            <a href="#" role="menuitem">Collections</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <button class="nav-button" aria-haspopup="true" aria-expanded="false" data-dropdown="resources">Resources ▾</button>
+          <div class="dropdown-panel" data-panel="resources" role="menu" aria-hidden="true" style="min-width:260px">
+            <a href="#" role="menuitem">Blog</a>
+            <a href="#" role="menuitem">Help Center</a>
+            <a href="#" role="menuitem">Partners</a>
+          </div>
+        </li>
+      </ul>
+
+      <div class="nav-right">
+        <a class="cta" href="#" role="button">Join Now</a>
+      </div>
+    </nav>
+
+    <button class="hamburger" aria-label="Open menu" aria-expanded="false" id="hamburgerBtn">
+      <!-- simple hamburger lines -->
+      <svg width="20" height="14" viewBox="0 0 20 14" fill="none" aria-hidden="true">
+        <rect width="20" height="2" rx="1" y="0" fill="currentColor"></rect>
+        <rect width="20" height="2" rx="1" y="6" fill="currentColor" opacity="0.9"></rect>
+        <rect width="20" height="2" rx="1" y="12" fill="currentColor" opacity="0.8"></rect>
+      </svg>
+    </button>
+
+  </div>
+</header>
+
+<!-- Mobile panel -->
+<div class="mobile-panel" id="mobilePanel" aria-hidden="true">
+  <div class="panel-inner" role="dialog" aria-modal="true" aria-label="Mobile menu">
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <div style="display:flex;gap:10px;align-items:center">
+        <span class="logo" style="width:38px;height:38px">B</span>
+        <div>
+          <strong>BlueCo</strong><br><small class="muted">Stores</small>
         </div>
-        <h1>Fish Hotels</h1>
-        <i>Giving Fish a Place To Call Home</i>
+      </div>
+      <button class="hamburger" id="mobileClose" aria-label="Close menu">✕</button>
+    </div>
+
+    <ul class="mobile-list" id="mobileList">
+      <li class="mobile-item">
+        <button data-mobile-dropdown="m-about" aria-expanded="false">About</button>
+        <div class="mobile-sub" data-mobile-panel="m-about">
+          <a href="#">Our Story</a>
+          <a href="#">Team</a>
+          <a href="#">Careers</a>
+        </div>
+      </li>
+      <li class="mobile-item">
+        <button data-mobile-dropdown="m-products" aria-expanded="false">Products</button>
+        <div class="mobile-sub" data-mobile-panel="m-products">
+          <a href="#">New Arrivals</a>
+          <a href="#">Popular</a>
+          <a href="#">Collections</a>
+        </div>
+      </li>
+      <li class="mobile-item">
+        <button data-mobile-dropdown="m-resources" aria-expanded="false">Resources</button>
+        <div class="mobile-sub" data-mobile-panel="m-resources">
+          <a href="#">Blog</a>
+          <a href="#">Help Center</a>
+          <a href="#">Partners</a>
+        </div>
+      </li>
+      <li style="margin-top:12px;">
+        <a class="cta" href="#" style="display:block;text-align:center">Join Now</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Hero / main -->
+<main>
+  <section class="hero" role="region" aria-label="Main">
+    <div class="hero-inner">
+      <div class="hero-card">
+        <h2>Hi, we're BlueCo.</h2>
+        <p>Explore our shopping game, buy amazing products, and discover brand new friends in our brand new cafe!</p>
+
+        <div style="display:flex;gap:8px;margin-top:14px">
+          <a class="cta" href="#">Play Now</a>
+          <a class="nav-button" style="background:rgba(255,255,255,0.02);">Join Group</a>
+        </div>
+
+        <div class="grid" aria-live="polite" aria-atomic="true">
+          <div class="card">
+            <div class="title">Featured Item</div>
+            <div class="sub">Limited time</div>
+          </div>
+          <div class="card">
+            <div class="title">New Drop</div>
+            <div class="sub">Just added</div>
+          </div>
+          <div class="card">
+            <div class="title">Popular</div>
+            <div class="sub">Top picks</div>
+          </div>
+          <div class="card">
+            <div class="title">Gift Cards</div>
+            <div class="sub">Share the love</div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="side">
+        <div class="mini">
+          <strong>Shop quick</strong>
+          <p class="muted" style="margin:8px 0 0">Browse curated collections and popular items.</p>
+        </div>
+
+        <div class="mini">
+          <strong>Events</strong>
+          <p class="muted" style="margin:8px 0 0">Join our in-game events & cafe hangouts.</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="muted">© <span id="year"></span> BlueCo — All rights reserved</div>
+    <div class="muted">Made with ❤️</div>
+  </div>
+</footer>
+
+<script>
+  // small helper: querySelectorAll to array
+  const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
+  const $ = (sel, root=document) => root.querySelector(sel);
+
+  // Dropdown logic for desktop
+  const navButtons = $$('[data-dropdown]');
+  let openPanel = null;
+
+  navButtons.forEach(btn => {
+    const key = btn.getAttribute('data-dropdown');
+    const panel = document.querySelector(`[data-panel="${key}"]`);
+
+    // toggle function
+    const toggle = (ev) => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      closeAllDropdowns();
+      if (!expanded) {
+        btn.setAttribute('aria-expanded','true');
+        panel.classList.add('open');
+        panel.setAttribute('aria-hidden','false');
+        openPanel = panel;
+      }
+    };
+
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggle(e);
+    });
+
+    // keyboard support (Enter or Space)
+    btn.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggle(e);
+      } else if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        toggle(e);
+        // focus first link
+        const first = panel.querySelector('a');
+        if(first) first.focus();
+      }
+    });
+  });
+
+  // Close when clicking outside or pressing Escape
+  document.addEventListener('click', (e) => {
+    // close only if click outside open panel
+    if (!e.target.closest('.nav-item')) closeAllDropdowns();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeAllDropdowns();
+  });
+
+  function closeAllDropdowns(){
+    navButtons.forEach(btn => btn.setAttribute('aria-expanded','false'));
+    $$('[data-panel]').forEach(p => { p.classList.remove('open'); p.setAttribute('aria-hidden','true'); });
+    openPanel = null;
+  }
+
+  // Mobile menu toggles
+  const hamburger = $('#hamburgerBtn');
+  const mobilePanel = $('#mobilePanel');
+  const mobileClose = $('#mobileClose');
+
+  function openMobile(){
+    hamburger.setAttribute('aria-expanded','true');
+    mobilePanel.style.display = 'block';
+    mobilePanel.setAttribute('aria-hidden','false');
+    // trap scroll
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMobile(){
+    hamburger.setAttribute('aria-expanded','false');
+    mobilePanel.style.display = 'none';
+    mobilePanel.setAttribute('aria-hidden','true');
+    document.body.style.overflow = '';
+  }
+
+  hamburger && hamburger.addEventListener('click', openMobile);
+  mobileClose && mobileClose.addEventListener('click', closeMobile);
+
+  // mobile dropdowns (accordion style)
+  $$('[data-mobile-dropdown]').forEach(btn => {
+    const key = btn.getAttribute('data-mobile-dropdown');
+    const panel = document.querySelector(`[data-mobile-panel="${key}"]`);
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+      panel.classList.toggle('open', !expanded);
+    });
+  });
+
+  // Close mobile when clicking outside panel-inner
+  mobilePanel.addEventListener('click', (e) => {
+    if (e.target === mobilePanel) closeMobile();
+  });
+
+  // Small improvement: close dropdowns on resize to avoid stuck states
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 900) closeMobile();
+    closeAllDropdowns();
+  });
+
+  // footer year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // keyboard accessibility: close panels with Esc inside panel links too
+  $$('[data-panel] a').forEach(a => {
+    a.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeAllDropdowns();
+    });
+  });
+
+</script>
     </body>
 </html>
