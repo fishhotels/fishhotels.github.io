@@ -1,0 +1,11 @@
+* {
+    margin: 0;
+    font-family: Arial;
+}
+
+#navbar {
+    color: black;
+    border-radius: 20px;
+    padding: 20px;
+    align-items: center;
+}
