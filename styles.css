@@ -112,11 +112,12 @@
     top:calc(100% + 10px);
     left:0;
     min-width:220px;
-    background: linear-gradient(180deg, rgba(38,38,38,0.02), rgba(38,38,38,0.01));
     border-radius:12px;
     padding:10px;
+    background-color: rgba(38, 38, 38, 0.85); /* dark gray with transparency */
+    backdrop-filter: blur(6px); /* adds soft blur for depth */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     border:1px solid rgba(255,255,255,0.03);
-    box-shadow: 0 10px 28px rgba(2,8,23,0.6);
     transform-origin: top left;
     opacity:0;
     pointer-events:none;
