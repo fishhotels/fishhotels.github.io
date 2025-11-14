@@ -372,17 +372,3 @@
     background: #1a1a1a;
     border-radius: 8px;
 }
-
-.contact-section {
-    text-align: center;
-    padding: 60px 20px;
-}
-
-.contact-btn {
-    display: inline-block;
-    padding: 12px 25px;
-    background: #4bbcf5;
-    color: #000;
-    border-radius: 8px;
-    text-decoration: none;
-}
