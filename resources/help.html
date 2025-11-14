@@ -3,22 +3,154 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Maintenance | Fish Hotels</title>
-  <link rel="stylesheet" href="/maintenence.css" />
+  <title>Help | Fish Hotels</title>
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
-  <div class="maintenance-container">
-    <h1>🐠 Fish Hotels</h1>
-    <h2>We’re doing a little underwater maintenance.</h2>
-    <p>Our servers are taking a deep dive for updates. We’ll be back shortly!</p>
-    <div class="bubbles">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+
+<!-- NAVBAR -->
+<header class="site-header" role="banner">
+  <div class="container" >
+    <a class="brand" href="/index.html" aria-label="Homepage">
+      <span class="logo" aria-hidden="true"><img class="logo" src="/IMG_5265.PNG"></span>
+      <div>
+        <h1>Fish</h1>
+        <p>Hotels</p>
+      </div>
+    </a>
+
+    <nav class="primary" role="navigation" aria-label="Primary">
+      <ul class="nav-list" id="navList">
+        <li class="nav-item">
+          <button class="nav-button" aria-haspopup="true" aria-expanded="false" data-dropdown="products">Services ▾</button>
+          <div class="dropdown-panel" data-panel="products" role="menu" aria-hidden="true">
+            <a href="/services/corporate.html" role="menuitem">Corporate</a>
+            <a href="/services/fish-care.html" role="menuitem">Fish Care & Management</a>
+            <a href="/services/aquascaping.html" role="menuitem">Aquascaping</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <button class="nav-button" aria-haspopup="true" aria-expanded="false" data-dropdown="resources">Resources ▾</button>
+          <div class="dropdown-panel" data-panel="resources" role="menu" aria-hidden="true" style="min-width:260px">
+            <a href="/resources/blog.html" role="menuitem">Blog</a>
+            <a href="/resources/help.html" role="menuitem">Help Center</a>
+            <a href="/resources/fishinfo.html" role="menuitem">Information on Fish</a>
+          </div>
+        </li>
+      </ul>
+
+      <div class="nav-right">
+        <a class="cta" href="/index.html" role="button">Dive In</a>
+      </div>
+    </nav>
+
+    <button class="hamburger" aria-label="Open menu" aria-expanded="false" id="hamburgerBtn">
+      <!-- simple hamburger lines -->
+      <svg width="20" height="14" viewBox="0 0 20 14" fill="none" aria-hidden="true">
+        <rect width="20" height="2" rx="1" y="0" fill="currentColor"></rect>
+        <rect width="20" height="2" rx="1" y="6" fill="currentColor" opacity="0.9"></rect>
+        <rect width="20" height="2" rx="1" y="12" fill="currentColor" opacity="0.8"></rect>
+      </svg>
+    </button>
+
   </div>
-  <script src="/maintenence.css"></script>
+</header>
+
+<!-- Mobile panel -->
+<div class="mobile-panel" id="mobilePanel" aria-hidden="true">
+  <div class="panel-inner" role="dialog" aria-modal="true" aria-label="Mobile menu">
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <div style="display:flex;gap:10px;align-items:center">
+        <span class="logo" style="width:38px;height:38px"><img src="/IMG_5265.PNG"></span>
+        <div>
+          <strong>Fish</strong><br><small class="muted">Hotels</small>
+        </div>
+      </div>
+      <button class="hamburger" id="mobileClose" aria-label="Close menu">✕</button>
+    </div>
+
+    <ul class="mobile-list" id="mobileList">
+      <li class="mobile-item">
+        <button data-mobile-dropdown="m-products" aria-expanded="false">Services</button>
+        <div class="mobile-sub" data-mobile-panel="m-products">
+          <a href="/services/corporate.html">Corporate</a>
+          <a href="/services/aquascaping.html">Hotel Setups</a>
+          <a href="/services/fish-care.html">Fish Care & Management</a>
+        </div>
+      </li>
+      <li class="mobile-item">
+        <button data-mobile-dropdown="m-resources" aria-expanded="false">Resources</button>
+        <div class="mobile-sub" data-mobile-panel="m-resources">
+          <a href="/resources/blog.html">Blog</a>
+          <a href="/resources/help.html">Help Center</a>
+          <a href="/resources/fishinfo.html">Research on Fish</a>
+        </div>
+      </li>
+      <li style="margin-top:12px;">
+        <a class="cta" href="https://fishhotels.github.io" style="display:block;text-align:center">Dive In</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- GRID SECTIONS -->
+<section class="help-grid">
+
+    <div class="help-card">
+        <h2>Getting Started</h2>
+        <p>New to FishDome? Learn how our systems protect aquatic life and how to get started.</p>
+        <a href="#getting-started" class="btn">Learn More</a>
+    </div>
+
+    <div class="help-card">
+        <h2>Technical Support</h2>
+        <p>Troubleshooting, dome installation support, and system configuration help.</p>
+        <a href="#technical" class="btn">View Support</a>
+    </div>
+
+    <div class="help-card">
+        <h2>Environmental Questions</h2>
+        <p>How Fish Domes reduce pollution impact, conservation data, and research resources.</p>
+        <a href="#environment" class="btn">Explore</a>
+    </div>
+
+    <div class="help-card">
+        <h2>Partnerships</h2>
+        <p>Work with us on local water cleanups, ecosystem recovery, and dome deployment programs.</p>
+        <a href="#partnerships" class="btn">Partner</a>
+    </div>
+
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq">
+        <h3>How do Fish Domes protect fish from pollution?</h3>
+        <p>Fish Domes isolate fish from polluted water while filtering and monitoring environmental conditions.</p>
+    </div>
+
+    <div class="faq">
+        <h3>Are Fish Domes safe for all aquatic species?</h3>
+        <p>Yes. Our designs ensure stable oxygenation, space, and safe ecological integration.</p>
+    </div>
+
+    <div class="faq">
+        <h3>Can individuals request a Fish Dome for local areas?</h3>
+        <p>Yes — we offer community initiatives and small-scale deployments.</p>
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section">
+    <h2>Still need help?</h2>
+    <p>Our support team is available to assist you.</p>
+
+    <a href="mailto:support@fishdome.org" class="contact-btn">Contact Support</a>
+</section>
+
 </body>
 </html>
