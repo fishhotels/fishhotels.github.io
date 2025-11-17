@@ -179,6 +179,121 @@
 
     </div>
 </section>
+<script>
+  // small helper: querySelectorAll to array
+  const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
+  const $ = (sel, root=document) => root.querySelector(sel);
 
+  // Dropdown logic for desktop
+  const navButtons = $$('[data-dropdown]');
+  let openPanel = null;
+
+  navButtons.forEach(btn => {
+    const key = btn.getAttribute('data-dropdown');
+    const panel = document.querySelector(`[data-panel="${key}"]`);
+
+    // toggle function
+    const toggle = (ev) => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      closeAllDropdowns();
+      if (!expanded) {
+        btn.setAttribute('aria-expanded','true');
+        panel.classList.add('open');
+        panel.setAttribute('aria-hidden','false');
+        openPanel = panel;
+      }
+    };
+
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggle(e);
+    });
+
+    // keyboard support (Enter or Space)
+    btn.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggle(e);
+      } else if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        toggle(e);
+        // focus first link
+        const first = panel.querySelector('a');
+        if(first) first.focus();
+      }
+    });
+  });
+
+  // Close when clicking outside or pressing Escape
+  document.addEventListener('click', (e) => {
+    // close only if click outside open panel
+    if (!e.target.closest('.nav-item')) closeAllDropdowns();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeAllDropdowns();
+  });
+
+  function closeAllDropdowns(){
+    navButtons.forEach(btn => btn.setAttribute('aria-expanded','false'));
+    $$('[data-panel]').forEach(p => { p.classList.remove('open'); p.setAttribute('aria-hidden','true'); });
+    openPanel = null;
+  }
+
+  // Mobile menu toggles
+  const hamburger = $('#hamburgerBtn');
+  const mobilePanel = $('#mobilePanel');
+  const mobileClose = $('#mobileClose');
+
+  function openMobile(){
+    hamburger.setAttribute('aria-expanded','true');
+    mobilePanel.style.display = 'block';
+    mobilePanel.setAttribute('aria-hidden','false');
+    // trap scroll
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMobile(){
+    hamburger.setAttribute('aria-expanded','false');
+    mobilePanel.style.display = 'none';
+    mobilePanel.setAttribute('aria-hidden','true');
+    document.body.style.overflow = '';
+  }
+
+  hamburger && hamburger.addEventListener('click', openMobile);
+  mobileClose && mobileClose.addEventListener('click', closeMobile);
+
+  // mobile dropdowns (accordion style)
+  $$('[data-mobile-dropdown]').forEach(btn => {
+    const key = btn.getAttribute('data-mobile-dropdown');
+    const panel = document.querySelector(`[data-mobile-panel="${key}"]`);
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+      panel.classList.toggle('open', !expanded);
+    });
+  });
+
+  // Close mobile when clicking outside panel-inner
+  mobilePanel.addEventListener('click', (e) => {
+    if (e.target === mobilePanel) closeMobile();
+  });
+
+  // Small improvement: close dropdowns on resize to avoid stuck states
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 900) closeMobile();
+    closeAllDropdowns();
+  });
+
+  // footer year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // keyboard accessibility: close panels with Esc inside panel links too
+  $$('[data-panel] a').forEach(a => {
+    a.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeAllDropdowns();
+    });
+  });
+
+</script>
 </body>
 </html>
