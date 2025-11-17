@@ -372,3 +372,59 @@
     background: #1a1a1a;
     border-radius: 8px;
 }
+/* Header */
+.info-header {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+/* Species Grid */
+.info-grid {
+    display: grid;
+    gap: 25px;
+    padding: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.info-card {
+    background: #1f1f1f;
+    padding: 25px;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+/* Pollution Impact */
+.impact-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.impact-box {
+    max-width: 700px;
+    margin: 20px auto;
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+    color: #ddd;
+}
+
+/* Solutions */
+.solutions-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.solutions-grid {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.solution-card {
+    background: #1f1f1f;
+    padding: 25px;
+    border-radius: 10px;
+    color: #fff;
+}
