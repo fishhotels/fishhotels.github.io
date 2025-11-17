@@ -3,22 +3,297 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Maintenance | Fish Hotels</title>
-  <link rel="stylesheet" href="/maintenence.css" />
+  <title>Aquascaping | Fish Hotels</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
 </head>
 <body>
-  <div class="maintenance-container">
-    <h1>🐠 Fish Hotels</h1>
-    <h2>We’re doing a little underwater maintenance.</h2>
-    <p>Our servers are taking a deep dive for updates. We’ll be back shortly!</p>
-    <div class="bubbles">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+ <header class="aqua-header">
+    <h1>Aquascaping</h1>
+    <p>Designing healthy, natural aquatic environments to support safe ecosystems and pollution-free habitats.</p>
+</header>
+        <header class="site-header" role="banner">
+  <div class="container" >
+    <a class="brand" href="/index.html" aria-label="Homepage">
+      <span class="logo" aria-hidden="true"><img class="logo" src="/IMG_5265.PNG"></span>
+      <div>
+        <h1>Fish</h1>
+        <p>Hotels</p>
+      </div>
+    </a>
+
+    <nav class="primary" role="navigation" aria-label="Primary">
+      <ul class="nav-list" id="navList">
+        <li class="nav-item">
+          <button class="nav-button" aria-haspopup="true" aria-expanded="false" data-dropdown="products">Services ▾</button>
+          <div class="dropdown-panel" data-panel="products" role="menu" aria-hidden="true">
+            <a href="/services/corporate.html" role="menuitem">Corporate</a>
+            <a href="/services/fish-care.html" role="menuitem">Fish Care & Management</a>
+            <a href="/services/aquascaping.html" role="menuitem">Aquascaping</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <button class="nav-button" aria-haspopup="true" aria-expanded="false" data-dropdown="resources">Resources ▾</button>
+          <div class="dropdown-panel" data-panel="resources" role="menu" aria-hidden="true" style="min-width:260px">
+            <a href="/resources/blog.html" role="menuitem">Blog</a>
+            <a href="/resources/help.html" role="menuitem">Help Center</a>
+            <a href="/resources/fishinfo.html" role="menuitem">Information on Fish</a>
+          </div>
+        </li>
+      </ul>
+
+      <div class="nav-right">
+        <a class="cta" href="/index.html" role="button">Dive In</a>
+      </div>
+    </nav>
+
+    <button class="hamburger" aria-label="Open menu" aria-expanded="false" id="hamburgerBtn">
+      <!-- simple hamburger lines -->
+      <svg width="20" height="14" viewBox="0 0 20 14" fill="none" aria-hidden="true">
+        <rect width="20" height="2" rx="1" y="0" fill="currentColor"></rect>
+        <rect width="20" height="2" rx="1" y="6" fill="currentColor" opacity="0.9"></rect>
+        <rect width="20" height="2" rx="1" y="12" fill="currentColor" opacity="0.8"></rect>
+      </svg>
+    </button>
+
   </div>
-  <script src="/maintenence.css"></script>
+</header>
+
+<!-- Mobile panel -->
+<div class="mobile-panel" id="mobilePanel" aria-hidden="true">
+  <div class="panel-inner" role="dialog" aria-modal="true" aria-label="Mobile menu">
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <div style="display:flex;gap:10px;align-items:center">
+        <span class="logo" style="width:38px;height:38px"><img src="/IMG_5265.PNG"></span>
+        <div>
+          <strong>Fish</strong><br><small class="muted">Hotels</small>
+        </div>
+      </div>
+      <button class="hamburger" id="mobileClose" aria-label="Close menu">✕</button>
+    </div>
+
+    <ul class="mobile-list" id="mobileList">
+      <li class="mobile-item">
+        <button data-mobile-dropdown="m-products" aria-expanded="false">Services</button>
+        <div class="mobile-sub" data-mobile-panel="m-products">
+          <a href="/services/corporate.html">Corporate</a>
+          <a href="/services/aquascaping.html">Hotel Setups</a>
+          <a href="/services/fish-care.html">Fish Care & Management</a>
+        </div>
+      </li>
+      <li class="mobile-item">
+        <button data-mobile-dropdown="m-resources" aria-expanded="false">Resources</button>
+        <div class="mobile-sub" data-mobile-panel="m-resources">
+          <a href="/resources/blog.html">Blog</a>
+          <a href="/resources/help.html">Help Center</a>
+          <a href="/resources/fishinfo.html">Research on Fish</a>
+        </div>
+      </li>
+      <li style="margin-top:12px;">
+        <a class="cta" href="https://fishhotels.github.io" style="display:block;text-align:center">Dive In</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- AQUASCAPING CONCEPTS GRID -->
+<section class="info-grid">
+
+    <div class="info-card">
+        <h2>Natural Habitats</h2>
+        <p>We recreate natural underwater landscapes using eco-friendly materials that help fish feel safe and reduce stress.</p>
+        <ul>
+            <li>Rock formations</li>
+            <li>Sheltering structures</li>
+            <li>Plant-safe substrate</li>
+            <li>Biologically stable zones</li>
+        </ul>
+    </div>
+
+    <div class="info-card">
+        <h2>Live Aquatic Plants</h2>
+        <p>Plants increase oxygen levels, improve water quality, and provide natural hiding spaces for fish.</p>
+        <ul>
+            <li>Java Fern</li>
+            <li>Hornwort</li>
+            <li>Anubias</li>
+            <li>Water Wisteria</li>
+        </ul>
+    </div>
+
+    <div class="info-card">
+        <h2>Sustainable Materials</h2>
+        <p>FishDome prioritizes pollution-free, non-toxic materials that are safe for long-term aquatic use.</p>
+        <ul>
+            <li>Certified-safe substrates</li>
+            <li>Non-polluting décor</li>
+            <li>Filtered stones & driftwood</li>
+            <li>Biodegradable components</li>
+        </ul>
+    </div>
+
+</section>
+
+
+<!-- DESIGN PRINCIPLES -->
+<section class="impact-section">
+    <h2>Core Aquascaping Principles</h2>
+
+    <div class="impact-box">
+        <h3>Balance & Stability</h3>
+        <p>All designs ensure water flow, oxygenation, and safe zones for fish to rest, hide, and feed.</p>
+    </div>
+
+    <div class="impact-box">
+        <h3>Environmental Safety</h3>
+        <p>We avoid any plastics, paints, or materials that could degrade and contribute to microplastic pollution.</p>
+    </div>
+
+    <div class="impact-box">
+        <h3>Ecological Realism</h3>
+        <p>Aquascapes mimic natural ecosystems, promoting healthier and more stable fish behavior.</p>
+    </div>
+</section>
+
+
+<!-- HOW FISHDOME USES AQUASCAPING -->
+<section class="solutions-section">
+    <h2>Aquascaping in FishDome Systems</h2>
+
+    <div class="solutions-grid">
+
+        <div class="solution-card">
+            <h3>Stress Reduction</h3>
+            <p>Fish retreat into natural plant and rock structures, reducing stress caused by light, noise, and pollutants.</p>
+        </div>
+
+        <div class="solution-card">
+            <h3>Water Quality Improvements</h3>
+            <p>Plants absorb nitrates and CO₂, supporting healthy dome environments without chemicals.</p>
+        </div>
+
+        <div class="solution-card">
+            <h3>Habitat Restoration</h3>
+            <p>Our aquascapes are built to mimic real ecosystems, helping reintroduce fish safely into restored waterways.</p>
+        </div>
+
+    </div>
+</section>
+<script>
+  // small helper: querySelectorAll to array
+  const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
+  const $ = (sel, root=document) => root.querySelector(sel);
+
+  // Dropdown logic for desktop
+  const navButtons = $$('[data-dropdown]');
+  let openPanel = null;
+
+  navButtons.forEach(btn => {
+    const key = btn.getAttribute('data-dropdown');
+    const panel = document.querySelector(`[data-panel="${key}"]`);
+
+    // toggle function
+    const toggle = (ev) => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      closeAllDropdowns();
+      if (!expanded) {
+        btn.setAttribute('aria-expanded','true');
+        panel.classList.add('open');
+        panel.setAttribute('aria-hidden','false');
+        openPanel = panel;
+      }
+    };
+
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggle(e);
+    });
+
+    // keyboard support (Enter or Space)
+    btn.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggle(e);
+      } else if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        toggle(e);
+        // focus first link
+        const first = panel.querySelector('a');
+        if(first) first.focus();
+      }
+    });
+  });
+
+  // Close when clicking outside or pressing Escape
+  document.addEventListener('click', (e) => {
+    // close only if click outside open panel
+    if (!e.target.closest('.nav-item')) closeAllDropdowns();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeAllDropdowns();
+  });
+
+  function closeAllDropdowns(){
+    navButtons.forEach(btn => btn.setAttribute('aria-expanded','false'));
+    $$('[data-panel]').forEach(p => { p.classList.remove('open'); p.setAttribute('aria-hidden','true'); });
+    openPanel = null;
+  }
+
+  // Mobile menu toggles
+  const hamburger = $('#hamburgerBtn');
+  const mobilePanel = $('#mobilePanel');
+  const mobileClose = $('#mobileClose');
+
+  function openMobile(){
+    hamburger.setAttribute('aria-expanded','true');
+    mobilePanel.style.display = 'block';
+    mobilePanel.setAttribute('aria-hidden','false');
+    // trap scroll
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMobile(){
+    hamburger.setAttribute('aria-expanded','false');
+    mobilePanel.style.display = 'none';
+    mobilePanel.setAttribute('aria-hidden','true');
+    document.body.style.overflow = '';
+  }
+
+  hamburger && hamburger.addEventListener('click', openMobile);
+  mobileClose && mobileClose.addEventListener('click', closeMobile);
+
+  // mobile dropdowns (accordion style)
+  $$('[data-mobile-dropdown]').forEach(btn => {
+    const key = btn.getAttribute('data-mobile-dropdown');
+    const panel = document.querySelector(`[data-mobile-panel="${key}"]`);
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+      panel.classList.toggle('open', !expanded);
+    });
+  });
+
+  // Close mobile when clicking outside panel-inner
+  mobilePanel.addEventListener('click', (e) => {
+    if (e.target === mobilePanel) closeMobile();
+  });
+
+  // Small improvement: close dropdowns on resize to avoid stuck states
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 900) closeMobile();
+    closeAllDropdowns();
+  });
+
+  // footer year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // keyboard accessibility: close panels with Esc inside panel links too
+  $$('[data-panel] a').forEach(a => {
+    a.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeAllDropdowns();
+    });
+  });
+
+</script>
 </body>
 </html>
